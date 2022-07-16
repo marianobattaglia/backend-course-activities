@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Product",
+    "price": 100,
+    "thumbnail": "https://placeimg.com/640/480/tech",
+    "id": 0
+  },
+  {
+    "title": "Product",
+    "price": 100,
+    "thumbnail": "https://placeimg.com/640/480/tech",
+    "id": 1
+  },
+  {
+    "title": "Product",
+    "price": 100,
+    "thumbnail": "https://placeimg.com/640/480/tech",
+    "id": 2
+  },
+  {
+    "title": "Product",
+    "price": 100,
+    "thumbnail": "https://placeimg.com/640/480/tech",
+    "id": 3
+  },
+  {
+    "title": "Product",
+    "price": 100,
+    "thumbnail": "https://placeimg.com/640/480/tech",
+    "id": 4
+  },
+  {
+    "title": "Product",
+    "price": 100,
+    "thumbnail": "https://placeimg.com/640/480/tech",
+    "id": 5
+  },
+  {
+    "title": "Product",
+    "price": 100,
+    "thumbnail": "https://placeimg.com/640/480/tech",
+    "id": 6
+  }
+]
