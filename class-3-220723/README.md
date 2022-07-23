@@ -7,16 +7,18 @@
 
 2. Incluir un archivo de texto 'productos.txt' y utilizar la clase Contenedor del desafío anterior para acceder a los datos persistidos del servidor.
 
-# Ejecutar aplicación:
+---
+
+## Ejecutar aplicación:
 
 1. Instalar dependencias
 
-## `npm install`
+### `npm install`
 
 2. Ubicarse en la carpeta "class-3-220723" dentro del terminal
 
-## `cd class-3-220723/`
+### `cd class-3-220723/`
 
 3. Iniciar servidor desde nodemon
 
-## `nodemon server.js`
+### `nodemon server.js`
