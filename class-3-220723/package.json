@@ -1,0 +1,7 @@
+{
+  "author": "Mariano Battaglia",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
