@@ -1,0 +1,11 @@
+{
+  "author": "Mariano Battaglia",
+  "dependencies": {
+    "express": "^4.18.1",
+    "moment": "^2.29.4",
+    "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "mongodb": "^4.8.0"
+  }
+}
