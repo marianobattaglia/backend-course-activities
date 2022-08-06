@@ -2,10 +2,11 @@
   "author": "Mariano Battaglia",
   "dependencies": {
     "express": "^4.18.1",
+    "firebase": "^9.9.1",
     "moment": "^2.29.4",
-    "nodemon": "^2.0.19"
+    "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
-    "mongodb": "^4.8.0"
+    "nodemon": "^2.0.19"
   }
 }
