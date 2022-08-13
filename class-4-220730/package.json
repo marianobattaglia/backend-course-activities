@@ -1,4 +1,12 @@
 {
+  "name": "backend_project",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "Mariano Battaglia",
   "dependencies": {
     "express": "^4.18.1",
