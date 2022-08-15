@@ -1,0 +1,27 @@
+html
+    head
+      style
+            include bootstrap.css
+            include styles.css
+      
+    body
+            div(class='navBarCustom')
+                  a(class='anchorButton' href='http://localhost:8080/products') Product List
+                  a(class='anchorButton' href='http://localhost:8080/form') Form
+            div(class="formContainer") 
+                  h1(class='titleForm')='Add product' 
+                  form(method="post" action="/products")
+                        label(class='inputLabel')="ID"
+                        input(type="text" name="id" id="id" class='textInput')
+                        br
+                        label(class='inputLabel')="Title:"
+                        input(type="text" name="title" id="title" class='textInput')
+                        br
+                        label(class='inputLabel')="Price:"
+                        input(type="text" name="price" id="price" class='textInput')
+                        br
+                        label(class='inputLabel')="Thumbnail:"
+                        input(type="text" name="thumbnail" id="thumbnail" class='textInput')
+                        br
+                        input(type="submit" value="Enviar" class='submitButton')
+            script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous")

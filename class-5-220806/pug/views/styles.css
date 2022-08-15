@@ -1,0 +1,76 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Calibri';
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+
+.pageTitle {
+  padding: 50px 50px 0 50px;
+}
+
+.productContainer {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+.productContainer p {
+  padding: 10px;
+}
+
+.productContainer img {
+  width: 80px;
+  height: 80px;
+}
+
+.productId {
+  width: 50px;
+}
+
+.productTitle {
+  width: 200px;
+}
+
+.productPrice {
+  width: 80px;
+}
+
+.productImg {
+  width: 100px;
+}
+
+.inputLabel {
+  width: 100px;
+}
+
+.textInput {
+  width: 200px;
+}
+
+.submitButton {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.formContainer {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.navBarCustom {
+  background-color: gray;
+}
+
+.navBarCustom a {
+  color: white;
+  padding: 10px;
+  padding-right: 20px;
+}
