@@ -14,15 +14,15 @@ app.use(express.json());
 app.set('view engine', 'pug');
 app.set('views', './views');
 
-let productsHC = [
+let productListDB = [
   { id: 1, title: 'iphone se 2022 256gb', price: 520, thumbnail: 'http://localhost:8080/public/iphone-se-2022.jpg' },
   { id: 2, title: 'iphone 13 pro max 512gb', price: 1700, thumbnail: 'http://localhost:8080/public/iphone-13-pro-max.jpeg' },
   { id: 3, title: 'macbook pro m1 8gb 512gb', price: 2000, thumbnail: 'http://localhost:8080/public/macbook-pro-m1.jpeg' },
 ];
 
 app.get('/products', (req, res) => {
-  if (productsHC.length > 0) {
-    res.render('products.pug', { title: 'Product list', products: productsHC });
+  if (productListDB.length > 0) {
+    res.render('products.pug', { title: 'Product list', products: productListDB });
   } else {
     res.render('error.pug', { msg: 'Cannot get products' });
   }
@@ -30,13 +30,13 @@ app.get('/products', (req, res) => {
 
 app.post('/products', (req, res) => {
   const { body } = req;
-  productsHC.push(body);
-  res.render('products.pug', { title: 'Products', products: productsHC });
+  productListDB.push(body);
+  res.render('products.pug', { title: 'Products', products: productListDB });
 });
 
 app.get('/products/:id', (req, res) => {
   let { id } = req.params;
-  const productFinded = productsHC.find((e) => e.id == id);
+  const productFinded = productListDB.find((e) => e.id == id);
   if (productFinded) {
     res.render('oneProduct.pug', { title: 'Product', item: productFinded });
   } else {
