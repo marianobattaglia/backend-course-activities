@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+
+  <body>
+    <%- include('../partials/navbar'); %>
+    <div class="container d-flex flex-column align-items-center">
+      <h1><%=title %></h1>
+      <div class="card text-center mx-3" style="width: 36rem">
+        <img src="<%=product.thumbnail%>" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title text-uppercase"><%=product.title%></h5>
+          <p class="card-text">$<%=product.price%></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

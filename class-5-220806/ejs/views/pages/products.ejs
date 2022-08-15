@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+
+  <body>
+    <%- include('../partials/navbar'); %>
+    <h1 class="text-center"><%=title %></h1>
+    <div class="container d-flex w-25">
+      <table class="table my-1">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Thumbnail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% products.forEach((item)=>{ %>
+          <tr>
+            <th scope="row"><%=item.id%></th>
+            <td style="text-transform: uppercase"><%=item.title%></td>
+            <td>$<%=item.price%></td>
+            <td><img src="<%=item.thumbnail%>" class="product-img" alt="..." /></td>
+          </tr>
+          <% })%>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
