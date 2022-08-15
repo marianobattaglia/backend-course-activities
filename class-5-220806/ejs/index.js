@@ -19,6 +19,26 @@ let productListDB = [
   { id: 3, title: 'macbook pro m1 8gb 512gb', price: 2000, thumbnail: 'http://localhost:8080/public/macbook-pro-m1.jpeg' },
 ];
 
+// ---- ROUTES ----
+app.get('/', (req, res) => {
+  res.send({
+    endpoints: [
+      {
+        description: 'Get all products from data base',
+        url: 'http://localhost:8080/products',
+      },
+      {
+        description: 'Get a product from ID, for exaple if you need the product ID 1 use this url',
+        url: 'http://localhost:8080/products/1',
+      },
+      {
+        description: 'Form to POST new products',
+        url: 'http://localhost:8080/form',
+      },
+    ],
+  });
+});
+
 app.get('/products', (req, res) => {
   res.render('pages/products', { title: 'Product List', products: productListDB });
 });
