@@ -1,0 +1,29 @@
+{{> navbar}}
+
+<div class="form-container container bg-light my-2 py-2 px-4 rounded">
+    <h1 class="text-center">Create product</h1>
+    <form method="post" action="/products">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">ID:</label>
+            <input type="text" class="form-control" name="id" id="id" placeholder="Numero de ID">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title:</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Product Title">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Price:</label>
+            <input type="text" class="form-control" name="price" id="price" placeholder="Product Price">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Thumbnail:</label>
+            <input type="text" class="form-control" name="thumbnail" id="thumbnail" placeholder="Product Thumbnail">
+        </div>
+
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary" value="Submit" />
+        </div>
+    </form>
+</div>
+
+<br />
