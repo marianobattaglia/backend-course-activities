@@ -1,0 +1,35 @@
+{{> navbar}}
+
+<h1 class="text-center">Product List</h1>
+<div class="container d-flex">
+    <table class="table my-1" id="cssTable">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Thumbnail</th>
+                <th scope="col">Detail</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if productsExist}}
+            {{#each products}}
+            <tr>
+                <th scope="row">
+                    {{this.id}}
+                </th>
+                <td style="text-transform: uppercase;">
+                    {{this.title}}
+                </td>
+                <td>${{this.price}}
+                </td>
+                <td><img src="{{this.thumbnail}}" class="product-img" alt="..." /></td>
+                </td>
+                <td><a class='nav-link active' aria-current='page' href='/products/{{this.id}}'>View Details</a></td>
+            </tr>
+            {{/each}}
+            {{/if}}
+        </tbody>
+    </table>
+</div>
