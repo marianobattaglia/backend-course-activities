@@ -1,0 +1,23 @@
+{
+  "name": "backend_project",
+  "version": "1.0.0",
+  "description": "Webchat - websockets",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mariano Battaglia",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1",
+    "express-handlebars": "^6.0.6",
+    "knex": "^2.2.0",
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.0.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
