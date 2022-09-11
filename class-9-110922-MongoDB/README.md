@@ -72,34 +72,41 @@ db.messages.count()</code></pre>
 
 5. Realizar un CRUD sobre la colección de productos:
 
-- a) Agregar un producto más en la colección de productos
+**a)** Agregar un producto más en la colección de productos
+
 <pre><code>db.products.insertOne({title: "iphone 14", price: 1499, thumbnail: "iphone 14"})</code></pre>
 
-- b) Realizar una consulta por nombre de producto específico:
+**b)** Realizar una consulta por nombre de producto específico:
 
 <pre><code>db.products.find({title: "iphone 13"})
 </code></pre>
 
-- i) Listar los productos con precio menor a 1000 pesos.
+**i)** Listar los productos con precio menor a 1000 pesos.
 
 <pre><code>db.products.find({price:{$lt: 1000}})</code></pre>
 
-- ii) Listar los productos con precio entre los 1000 a 3000 pesos.
+**ii)** Listar los productos con precio entre los 1000 a 3000 pesos.
+
 <pre><code>db.products.find({price: { $gte: 1000, $lte: 3000 }})</code></pre>
 
-- iii) Listar los productos con precio mayor a 3000 pesos.
+**iii)** Listar los productos con precio mayor a 3000 pesos.
+
 <pre><code>db.products.find({ price: { $gt: 3000 } })</code></pre>
 
-- iv) Realizar una consulta que traiga sólo el nombre del tercer producto más barato.
+**iv)** Realizar una consulta que traiga sólo el nombre del tercer producto más barato.
+
 <pre><code>db.products.find().sort({precio: 1}).limit(1).skip(2)</code></pre>
 
-- c) Hacer una actualización sobre todos los productos, agregando el campo stock a todos ellos con un valor de 100.
+**c)** Hacer una actualización sobre todos los productos, agregando el campo stock a todos ellos con un valor de 100.
+
 <pre><code>db.products.updateMany({}, { $set: { stock: 100} })</code></pre>
 
-- d) Cambiar el stock a cero de los productos con precios mayores a 4000 pesos.
+**d)** Cambiar el stock a cero de los productos con precios mayores a 4000 pesos.
+
 <pre><code>db.products.updateMany({ price: { $gt: 4000 } }, { $set: { stock: 0} })</code></pre>
 
-- e) Borrar los productos con precio menor a 1000 pesos
+**e)** Borrar los productos con precio menor a 1000 pesos
+
 <pre><code>db.products.deleteMany({ price: { $lt: 1000 } })
 </code></pre>
 
