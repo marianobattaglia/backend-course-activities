@@ -26,3 +26,14 @@ La solución entregada deberá persistir las sesiones de usuario en Mongo Atlas.
 - Mediante el cliente web de Mongo Atlas, revisar los id de sesión correspondientes a cada cliente y sus datos.
 - Borrar una sesión de cliente en la base y comprobar que en el próximo request al usuario se le presente la vista de login.
 - Fijar un tiempo de expiración de sesión de 10 minutos recargable con cada visita del cliente al sitio y verificar que si pasa ese tiempo de inactividad el cliente quede deslogueado.
+
+## Rutas
+
+| Método | Endpoint            | Descripción                                                                                                           |
+| ------ | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| POST   | **/login**          | Formulario de login. Para almacenar las sesiones se utilizó mongoAtlas.                                               |
+| POST   | **/logout**         | Se puede acceder directamente desde el endpoint o clickeando sobre el botón de "logout".                              |
+| GET    | **/productos**      | Lista todos los productos almacenados                                                                                 |
+| POST   | **/productos**      | Crea y almacena productos al listado                                                                                  |
+| GET    | **/productos-test** | Lista 5 productos mock generados con **Faker.js**                                                                     |
+| GET    | **/chat**           | Retorna el chat creado con socket. Muestra la data desnormalizada y es almacenada normalizada en un archivo tipo JSON |
