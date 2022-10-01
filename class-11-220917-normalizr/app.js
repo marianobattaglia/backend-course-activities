@@ -11,12 +11,12 @@ const app = express();
 const httpServer = new HttpServer(app);
 const io = new IOServer(httpServer);
 
-/* ---- Imports ---- */
+/* ---- Atlas for Data Persistance ---- */
 const MongoStore = require("connect-mongo");
 const adavancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 /* ----------------- */
 
-/* ---- Session config ---- */
+/* ---- Session configuration ---- */
 app.use(
   session({
     store: MongoStore.create({
