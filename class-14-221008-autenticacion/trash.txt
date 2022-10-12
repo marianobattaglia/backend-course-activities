@@ -1,0 +1,5 @@
+Ruta relativa: 
+mongod --dbpath "..\class-9-220911-MongoDB"
+
+O localmente:
+mongod --dbpath "C:\Users\batta\Desktop\miBaseMongo"
