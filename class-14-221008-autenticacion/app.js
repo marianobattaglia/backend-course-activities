@@ -6,6 +6,7 @@ const { Server: HttpServer } = require("http");
 const { Server: IOServer } = require("socket.io");
 const path = require("path");
 const routes = require("./routers/index");
+/* ---- Passport ---- */
 const passport = require("passport");
 
 const app = express();

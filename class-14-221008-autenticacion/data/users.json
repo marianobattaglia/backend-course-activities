@@ -1,0 +1,46 @@
+[
+  {
+    "username": "mbattaglia@gmail.com",
+    "password": "123123123",
+    "name": "Mariano Battaglia",
+    "address": "calle 1",
+    "age": "29",
+    "phone": "+5491122223333",
+    "avatar": "https://media.istockphoto.com/photos/student-using-laptop-having-online-class-with-teacher-picture-id1288092444",
+    "role": "user",
+    "id": 1
+  },
+  {
+    "username": "nombre@gmail.com",
+    "password": "12345678",
+    "name": "Pepito",
+    "address": "Calle 124",
+    "age": "20",
+    "phone": "+5491144445555",
+    "avatar": "https://media.istockphoto.com/photos/student-using-laptop-having-online-class-with-teacher-picture-id1288092444",
+    "role": "user",
+    "id": 2
+  },
+  {
+    "username": "prueba2@mail.com",
+    "password": "12345678",
+    "name": "Prueba",
+    "address": "calle 123",
+    "age": "21",
+    "phone": "+5491111111111",
+    "avatar": "https://media.istockphoto.com/photos/student-using-laptop-having-online-class-with-teacher-picture-id1288092444",
+    "role": "user",
+    "id": 3
+  },
+  {
+    "username": "prueba3@mail.com",
+    "password": "123456789",
+    "name": "Prueba3",
+    "address": "asd123",
+    "age": "21",
+    "phone": "+54911111111",
+    "avatar": "https://media.istockphoto.com/photos/student-using-laptop-having-online-class-with-teacher-picture-id1288092444",
+    "role": "user",
+    "id": 4
+  }
+]

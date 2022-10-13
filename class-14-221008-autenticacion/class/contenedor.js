@@ -49,6 +49,19 @@ class Contenedor {
     return result;
   }
 
+  getByUser(username) {
+    let result;
+    if (this.content !== []) {
+      result = this.content.findIndex((x) => x.username === username);
+      if (result === -1) {
+        result = null;
+      }
+    } else {
+      result = "File is empty";
+    }
+    return result;
+  }
+
   deleteById(id) {
     let result;
     if (this.content !== []) {
