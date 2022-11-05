@@ -97,7 +97,8 @@ httpServer.listen(process.env.PORT || 8080, () => {
   console.log(`SERVER ON - Listening on port ${process.env.PORT || 8080}`);
 });
 
-// Artillery
+// Artillery -> iniciar servidor con 'node app.js 8081 FORK'
+/*
 const cluster = require("cluster");
 const os = require("os");
 const PORT = parseInt(process.argv[2]) || 8080;
@@ -154,3 +155,4 @@ function isPrime(num) {
   }
   return true;
 }
+*/

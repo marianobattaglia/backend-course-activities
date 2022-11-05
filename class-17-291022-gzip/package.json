@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "artillery": "^2.0.0-25",
+    "autocannon": "^7.10.0",
     "cluster": "^0.7.7",
     "compression": "^1.7.4",
     "connect-mongo": "^4.6.0",
@@ -20,9 +21,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "test": "node benchmark.js",
+    "start": "0x app.js",
+    "dev": "nodemon app.js",
+    "start2": "node app.js",
+    "test2": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mariano Battaglia",
   "license": "ISC",

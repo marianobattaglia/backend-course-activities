@@ -8,3 +8,12 @@ Artillery:
 3. Hacemos lo mismo con el servidor en modo Cluster:
     artillery quick --count 50 -n 40 http://localhost:8081?max=100000 > result_cluster.txt
 
+Prueba profilling console log:
+Sin console-log: 
+1. artillery quick --count 10 -n 50 "http://localhost:8080/info" > result_bloq_no-clg.txt
+2. node --prof-process bloq-v8.log > result_prof-bloq_clg.txt
+
+Con console-log
+1. artillery quick --count 10 -n 50 "http://localhost:8080/info" > result_bloq_clg.txt
+2. node --prof-process bloq-v8.log > result_prof-bloq_clg.txt
+

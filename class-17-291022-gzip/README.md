@@ -35,3 +35,37 @@ Luego utilizaremos Autocannon en línea de comandos, emulando 100 conexiones con
 Realizar un informe en formato pdf sobre las pruebas realizadas incluyendo los resultados de todos los test (texto e imágenes).
 
 Al final incluir la conclusión obtenida a partir del análisis de los datos.
+
+---
+
+# Como correr el proyecto:
+
+### 1. Para correr la aplicación:
+
+1.  `node app.js`
+2.  Correr base mongo:
+    1.  Desde ruta relativa: `mongod --dbpath "..\class-9-220911-MongoDB"`
+    2.  Local: `mongod --dbpath "C:\Users\batta\Desktop\miBaseMongo"`
+
+### 2. Para realizar las pruebas con artillery:
+
+1.  Correr servidor en modo FORK:\
+    `node app.js 8081 FORK`
+2.  Abrir otra terminal en la misma carpeta y correr: \
+    `artillery quick --count 50 -n 40 http://localhost:8081?max=100000 > result_fork.txt`
+3.  Hacemos lo mismo con el servidor en modo Cluster:\
+    `artillery quick --count 50 -n 40 http://localhost:8081?max=100000 > result_cluster.txt`
+
+### 3. Para realizar profilling:
+
+1.  Sin console-log:\
+    `artillery quick --count 10 -n 50 "http://localhost:8080/info" > result_bloq_no-clg.txt`\
+     `node --prof-process bloq-v8.log > result_prof-bloq_no-clg.txt`
+2.  Con console-log\
+    `artillery quick --count 10 -n 50 "http://localhost:8080/info" > result_bloq_clg.txt`
+    `node --prof-process bloq-v8.log > result_prof-bloq_clg.txt`
+
+### 4. Para realizar test de carga con autocannon:
+
+1.  `npm start` (seteado como -> `0x app.js`)
+2.  `npm test` (seteado como -> `node benchmark.js`)

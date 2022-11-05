@@ -6,6 +6,20 @@ server.get("/info", (req, res) => {
   const args =
     process.argv.length > 2 ? process.argv.slice(2).join(", ") : "ninguno";
 
+  /*
+  const info = `
+  Sistema operativo: ${process.platform}
+  Node version: ${process.version}
+  Path de ejecución: ${process.execPath}
+  Carpeta del proyecto: ${process.cwd()}
+  Argumentos de entrada: ${args}
+  ID: ${process.pid}
+  Memoria total reservada: ${`${Math.round(
+    process.memoryUsage().rss / 1024
+  )} KB`}`;
+  console.log(info);
+*/
+
   res.send(`
     <ul>
     <li>Sistema operativo: ${process.platform}</li>
@@ -23,8 +37,8 @@ server.get("/info", (req, res) => {
 //Randoms
 server.get("/randoms", (req, res) => {
   const num = req.query.cant || 100;
-  const randoms = fork('./utils/random.js', [num]);
-  
+  const randoms = fork("./utils/random.js", [num]);
+
   randoms.send("start");
 
   randoms.on("error", (err) => {
@@ -35,7 +49,5 @@ server.get("/randoms", (req, res) => {
     return res.json(obj);
   });
 });
-
-
 
 module.exports = server;
