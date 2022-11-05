@@ -1,0 +1,10 @@
+Artillery:
+1. Correr servidor en modo FORK:
+    node app.js 8081 FORK
+
+2. Abrir otra terminal en la misma carpeta y correr: 
+    artillery quick --count 50 -n 40 http://localhost:8081?max=100000 > result_fork.txt
+
+3. Hacemos lo mismo con el servidor en modo Cluster:
+    artillery quick --count 50 -n 40 http://localhost:8081?max=100000 > result_cluster.txt
+
