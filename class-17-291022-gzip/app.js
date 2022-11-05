@@ -7,6 +7,10 @@ const { Server: HttpServer } = require("http");
 const { Server: IOServer } = require("socket.io");
 const path = require("path");
 const routes = require("./routers/index");
+// GZIP
+const compression = require("compression");
+// Winston
+const { logger } = require("./utils/loggers");
 
 const app = express();
 const httpServer = new HttpServer(app);
@@ -34,6 +38,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("./views/layouts"));
 app.use("/", routes);
+app.use(compression());
+app.use((req, res, next) => {
+  logger.info({ URL: req.originalUrl, method: req.method });
+  next();
+});
 
 /* ---- Handlebars (como motor de plantillas) ---- */
 app.engine(
@@ -76,6 +85,11 @@ io.on("connection", async (socket) => {
 app.use(function (err, req, res, next) {
   console.log(err.stack);
   res.status(500).send("Error: " + err);
+});
+
+app.all("*", (req, res) => {
+  logger.warn({ URL: req.originalUrl, method: req.method });
+  res.status(404).send("Ruta no encontrada");
 });
 
 /* ---- Server ---- */
